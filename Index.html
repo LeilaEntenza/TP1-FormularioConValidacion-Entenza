@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario con validación</title>
-    <link rel="stylesheet" src="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <form>
-        Nombre: <input id="NombreCompleto" type="text" oninput="verificarNombre(this)" onchange="verificarNombre(this)">
-        Email: <input id="Email" type="email" oninput="verificarMail(this)" onchange="verificarMail(this)">
-        Contraseña: <input id="Clave" type="password" oninput="verificarContraseña(this)" onchange="verificarContraseña(this)">
-        Confirmar contraseña: <input id="Confirmar" type="password" oninput="sonIguales(this)" onchange="sonIguales(this)">
+        <p>Nombre:</p> 
+        <input id="NombreCompleto" type="text" oninput="verificarNombre(this)" onchange="verificarNombre(this)">
+        <p>Email:</p>
+        <input id="Email" type="email" oninput="verificarMail(this)" onchange="verificarMail(this)">
+        <p>Contraseña: </p>
+        <input id="Clave" type="password" oninput="verificarContraseña(this)" onchange="verificarContraseña(this)">
+        <p>Confirmar contraseña: </p>
+        <input id="Confirmar" type="password" oninput="sonIguales(this)" onchange="sonIguales(this)">
         <input id="send" type="button" value="Registrar">
     </form>
     <script src="script.js"></script>
