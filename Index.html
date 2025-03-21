@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario con validación</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form>
-        <p>Nombre:</p> 
-        <input id="NombreCompleto" type="text" oninput="verificarNombre(this)" onchange="verificarNombre(this)">
-        <p>Email:</p>
-        <input id="Email" type="email" oninput="verificarMail(this)" onchange="verificarMail(this)">
-        <p>Contraseña: </p>
-        <input id="Clave" type="password" oninput="verificarContraseña(this)" onchange="verificarContraseña(this)">
-        <p>Confirmar contraseña: </p>
-        <input id="Confirmar" type="password" oninput="sonIguales(this)" onchange="sonIguales(this)">
-        <input id="send" type="button" value="Registrar">
-    </form>
+    <main>
+    <div id="Form">
+        <form>
+            <p>Nombre</p> 
+            <input id="NombreCompleto" type="text" oninput="verificarNombre(this)" onchange="verificarNombre(this)">
+            <p>Email</p>
+            <input id="Email" type="email" oninput="verificarMail(this)" onchange="verificarMail(this)">
+            <p>Contraseña </p>
+            <input id="Clave" type="password" oninput="verificarClave(this)" onchange="verificarContraseña(this)">
+            <p>Confirmar contraseña </p>
+            <input id="Confirmar" type="password" oninput="sonIguales(this)" onchange="sonIguales(this)">
+            <input class="Registrar" id="send" type="button" value="Registrar" onclick="verificar()">
+        </form>
+    </div>
+</main>
     <script src="script.js"></script>
 </body>
 </html>
