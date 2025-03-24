@@ -1,5 +1,5 @@
 body{
-    background-image: url('Fondo.jpg');
+    background-image: url('/images/Fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Lato", sans-serif;
@@ -66,6 +66,12 @@ input:focus{
 .devol{
     width: 100%;
     font-size: medium;
-    margin-top: 0.5%;
+    margin-top: 1%;
     color: red;
+    display: flex;
+    align-items: center;
+}
+
+.devol img{
+    margin-right: 1%;
 }
