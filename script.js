@@ -57,11 +57,21 @@ function sonIguales(element){
 }
 
 function verificar(){
-
+        let nombre = document.getElementById('NombreCompleto').value;
+        let email = document.getElementById("Email").value;
+        let clave = document.getElementById("Clave").value;
         let Form =document.getElementById("Form");
         let devolucion = document.getElementById("intentoRegistrar");
         if(nombreVer == 1 && mailVer==1 && claveVer == 1 && comprobarVer == 1){
-            devolucion.innerHTML = "";
+            let usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
+            let usuario = {
+                Nombre: nombre,
+                Email: email,
+                Clave: clave 
+            }
+            usuarios.push(usuario);
+            localStorage.setItem("Usuarios", JSON.stringify(usuarios));
         }
         else devolucion.innerHTML = "por favor, complete los datos correctamente antes de enviar";
 }
+
