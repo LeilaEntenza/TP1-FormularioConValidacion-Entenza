@@ -56,6 +56,9 @@ function sonIguales(element){
     }
 }
 
+var usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
+var nombres = [];
+
 function verificar(){
         let nombre = document.getElementById('NombreCompleto').value;
         let email = document.getElementById("Email").value;
@@ -63,7 +66,6 @@ function verificar(){
         let Form =document.getElementById("Form");
         let devolucion = document.getElementById("intentoRegistrar");
         if(nombreVer == 1 && mailVer==1 && claveVer == 1 && comprobarVer == 1){
-            let usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
             let usuario = {
                 Nombre: nombre,
                 Email: email,
@@ -75,3 +77,13 @@ function verificar(){
         else devolucion.innerHTML = "por favor, complete los datos correctamente antes de enviar";
 }
 
+function mostrarUsuarios(){
+    let mostrar = document.getElementById("mostrar");
+    if(usuarios != null){
+        
+        for (let i = 0; i < usuarios.length; i++){
+            nombres+=`<li>${usuarios[i].Nombre}</li>`;
+        }
+        mostrar.innerHTML = `<h1>Usuarios registrados:</h1><ul>${nombres}</ul>`;
+    }
+}
