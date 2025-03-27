@@ -20,10 +20,16 @@
             <input id="Email" type="email" oninput="verificarMail(this)" onchange="verificarMail(this)">
             <div id="devolucionMail" class="devol"></div>
             <p>Contraseña </p>
-            <input id="Clave" type="password" oninput="verificarClave(this)" onchange="verificarContraseña(this)">
+            <input id="Clave" type="password" oninput="verificarClave(this)" onchange="verificarClave(this)">
+            <div class="show">
+            <input type="checkbox" class="check" id="show" onclick="mostrarContra('#Clave')"> <p>Mostrar contraseña</p>
+        </div>
             <div id="devolucionContra" class="devol"></div>
             <p>Confirmar contraseña </p>
             <input id="Confirmar" type="password" oninput="sonIguales(this)" onchange="sonIguales(this)">
+            <div class="show">
+                <input type="checkbox" class="check" id="show" onclick="mostrarContra('#Confirmar')"> <p>Mostrar contraseña</p>
+            </div>
             <div id="devolucionIguales" class="devol"></div>
             <input class="Registrar" id="send" type="button" value="Registrar" onclick="verificar()">
             <div id="intentoRegistrar" class="devol"></div>

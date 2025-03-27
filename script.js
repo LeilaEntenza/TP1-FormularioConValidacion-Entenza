@@ -87,3 +87,11 @@ function mostrarUsuarios(){
         mostrar.innerHTML = `<h1>Usuarios registrados:</h1><ul>${nombres}</ul>`;
     }
 }
+
+const mostrarContra = (campo) => {
+    let clave = document.querySelector(`${campo}`);
+    if(clave.type === "password"){
+        clave.type = "text";
+    }
+    else clave.type = "password";
+}
