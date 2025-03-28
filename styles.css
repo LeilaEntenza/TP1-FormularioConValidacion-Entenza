@@ -98,6 +98,7 @@ li{
     display: flex;
     align-items: center;
     font-size: medium;
+    margin: 1%;
 }
 
 li img{
