@@ -85,7 +85,7 @@ const mostrarUsuarios = () => {
     if(usuarios != null){
         
         for (let i = 0; i < usuarios.length; i++){
-            nombres+=`<li>${usuarios[i].Nombre}</li>`;
+            nombres+=`<li>${usuarios[i].Nombre} <img width="7%" onclick="borrar(${i})" src="images/Tacho.png"></li>`;
         }
         mostrar.innerHTML = `<h1>Usuarios registrados:</h1><ul>${nombres}</ul>`;
         
@@ -107,4 +107,10 @@ const ocultarUsuarios = () => {
     let mostrarInput = document.getElementById("usuarios");
     mostrarInput.value = "Mostrar usuarios";
     mostrarInput.setAttribute("onclick", "mostrarUsuarios()");
+}
+
+const borrar = (indice) => {
+    usuarios.splice(indice, 1);
+    localStorage.setItem("Usuarios", JSON.stringify(usuarios));
+    mostrarUsuarios();
 }
