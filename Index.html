@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <label for="toggle">Modo oscuro</label>
+    <input type="checkbox" id="toggle">
+    <div class="cont">
     <div id="Form">
         <form>
             <p>Nombre</p> 
@@ -21,16 +23,16 @@
             <div id="devolucionMail" class="devol"></div>
             <p>Contraseña </p>
             <input id="Clave" type="password" oninput="verificarClave(this)" onchange="verificarClave(this)">
-            <div class="show">
-            <input type="checkbox" class="check" id="show" onclick="('#Clave')"> <p>Mostrar contraseña</p>
-        </div>
             <div id="devolucionContra" class="devol"></div>
+            <div class="show">
+            <input type="checkbox" class="check" id="show" onclick="mostrarContra('#Clave')"> <p>Mostrar contraseña</p>
+        </div>
             <p>Confirmar contraseña </p>
             <input id="Confirmar" type="password" oninput="sonIguales(this)" onchange="sonIguales(this)">
+            <div id="devolucionIguales" class="devol"></div>
             <div class="show">
                 <input type="checkbox" class="check" id="show" onclick="mostrarContra('#Confirmar')"> <p>Mostrar contraseña</p>
             </div>
-            <div id="devolucionIguales" class="devol"></div>
             <input class="Registrar" id="send" type="button" value="Registrar" onclick="verificar()">
             <div id="intentoRegistrar" class="devol"></div>
             <input class="ListaUsuarios" id="usuarios" type="button" value="Mostrar usuarios" onclick="mostrarUsuarios()">
@@ -38,7 +40,8 @@
     </div>
     <div id="mostrar" class="mostrar">
     </div>
-</main>
+
+</div>
     <script src="script.js"></script>
 </body>
 </html>
