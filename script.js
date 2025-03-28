@@ -5,10 +5,10 @@ function verificarNombre(element){
     let devolucion = document.getElementById("devolucionNombre");
     if(nombre.length > 3){
         nombreVer = 1;
-        devolucion.innerHTML = '<img width="5%" src="/images/Correcto.png">';
+        devolucion.innerHTML = '<img width="5%" src="images/Correcto.png">';
     }
     else {
-        devolucion.innerHTML = `<img width="4%" src="/images/Mal.png"> el nombre debe contener más de 3 caracteres`;
+        devolucion.innerHTML = `<img width="4%" src="images/Mal.png"> el nombre debe contener más de 3 caracteres`;
         nombreVer = 0;
     }
 }
@@ -18,11 +18,11 @@ function verificarMail(element){
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     let devolucion = document.getElementById("devolucionMail");
     if(emailRegex.test(email)){
-        devolucion.innerHTML = '<img width="5%" src="/images/Correcto.png">';
+        devolucion.innerHTML = '<img width="5%" src="images/Correcto.png">';
         mailVer = 1;  
     }
     else{
-        devolucion.innerHTML = `<img width="4%" src="/images/Mal.png"> el formato no es correcto`;
+        devolucion.innerHTML = `<img width="4%" src="images/Mal.png"> el formato no es correcto`;
         mailVer = 0;
     }
 }
@@ -33,11 +33,11 @@ function verificarClave(element){
     const contieneNum = /\d/;
     const contieneLetra =  /[a-zA-Z]/g;
     if (clave.length>8 && contieneNum.test(clave) && contieneLetra.test(clave)){
-        devolucion.innerHTML = '<img width="5%" src="/images/Correcto.png">';
+        devolucion.innerHTML = '<img width="5%" src="images/Correcto.png">';
         claveVer = 1;
     }
     else {
-        devolucion.innerHTML = `<img width="4%" src="/images/Mal.png"> la contraseña debe contener al menos 8 caracteres, 1 número y una letra`;
+        devolucion.innerHTML = `<img width="4%" src="images/Mal.png"> la contraseña debe contener al menos 8 caracteres, 1 número y una letra`;
         claveVer = 0;
 }
 }
@@ -47,11 +47,11 @@ function sonIguales(element){
     let clave = document.getElementById("Clave").value;
     let claveVerificar = document.getElementById("Confirmar").value;
     if(clave === claveVerificar){
-        devolucion.innerHTML = '<img width="5%" src="/images/Correcto.png">';
+        devolucion.innerHTML = '<img width="5%" src="images/Correcto.png">';
         comprobarVer = 1;
     }
     else{
-        devolucion.innerHTML = `<img width="4%" src="/images/Mal.png"> las contraseñas no son iguales`;
+        devolucion.innerHTML = `<img width="4%" src="images/Mal.png"> las contraseñas no son iguales`;
         comprobarVer = 0;
     }
 }
