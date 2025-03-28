@@ -71,6 +71,7 @@ const verificar = () => {
             }
             usuarios.push(usuario);
             localStorage.setItem("Usuarios", JSON.stringify(usuarios));
+            mostrarUsuarios();
         }
         else devolucion.innerHTML = "por favor, complete los datos correctamente antes de enviar";
 }
