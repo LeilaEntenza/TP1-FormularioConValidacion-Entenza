@@ -1,5 +1,5 @@
 body{
-    background-image: url('/images/Fondo.jpg');
+    background-image: url('images/Fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Lato", sans-serif;
