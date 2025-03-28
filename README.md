@@ -1,1 +1,2 @@
-"# TP1-FormularioConValidacion-Entenza" 
+# TP1-FormularioConValidacion-Entenza
+Formulario de registro de usuario con validación en tiempo real de datos. Permite mostrar la contraseña en caso de desearlo y guarda todos los usuarios permitiendo a la vez visualizarlos.
