@@ -1,5 +1,5 @@
 body{
-    background-image: url('images/Fondo.jpg');
+    background-image: url('images/fondo2.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Lato", sans-serif;
@@ -95,6 +95,13 @@ input:focus{
 li{
     color: white;
     list-style: none;
+    display: flex;
+    align-items: center;
+    font-size: medium;
+}
+
+li img{
+    margin-left: 0.5%;
 }
 
 h1{

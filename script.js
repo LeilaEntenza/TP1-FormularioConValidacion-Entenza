@@ -52,7 +52,8 @@ const verificarClave = (element) =>{
     else {
         devolucion.innerHTML = `<img width="4%" src="images/Mal.png"> la contraseña debe contener al menos 8 caracteres, 1 número y una letra`;
         claveVer = 0;
-}
+    }
+    sonIguales();
 }
 
 const sonIguales = (element) => {
