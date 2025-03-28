@@ -1,4 +1,17 @@
 var nombreVer=0, mailVer=0, claveVer=0, comprobarVer=0;
+var usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
+let cambiar=document.getElementById('cambiar');
+let labelCambiar = document.getElementById('labelCambiar');
+cambiar.addEventListener('change',(event)=>{
+    let checked=event.target.checked;
+    document.querySelector('form').classList.toggle('dark');
+    if(checked==true){
+        labelCambiar.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M11 5V1h2v4zm6.65 2.75l-1.375-1.375l2.8-2.875l1.4 1.425zM19 13v-2h4v2zm-8 10v-4h2v4zM6.35 7.7L3.5 4.925l1.425-1.4L7.75 6.35zm12.7 12.8l-2.775-2.875l1.35-1.35l2.85 2.75zM1 13v-2h4v2zm3.925 7.5l-1.4-1.425l2.8-2.8l.725.675l.725.7zM12 18q-2.5 0-4.25-1.75T6 12t1.75-4.25T12 6t4.25 1.75T18 12t-1.75 4.25T12 18"/></svg>';
+    }
+    else{
+        labelCambiar.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M9.272 2.406a1 1 0 0 0-1.23-1.355C6.59 1.535 5.432 2.488 4.37 3.55a11.4 11.4 0 0 0 0 16.182c4.518 4.519 11.51 4.261 15.976-.205c1.062-1.062 2.014-2.22 2.498-3.673A1 1 0 0 0 21.55 14.6c-3.59 1.322-7.675.734-10.433-2.025C8.35 9.808 7.788 5.744 9.272 2.406"/></svg>';
+    }
+})
 
 const verificarNombre = (element) => {
     let nombre = document.getElementById('NombreCompleto').value;
@@ -56,7 +69,6 @@ const sonIguales = (element) => {
     }
 }
 
-var usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
 const verificar = () => {
         let nombre = document.getElementById('NombreCompleto').value;
         let email = document.getElementById("Email").value;
