@@ -82,6 +82,7 @@ input:focus{
     color: red;
     display: flex;
     align-items: center;
+    margin-top: 1%;
 }
 
 .devol img{
@@ -120,22 +121,6 @@ h1{
     align-items: center;
 }
 
-#toggle{
-    display: none;
-}
-
-#labelToggle{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 0.5%;
-    border-radius: 50px;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-}
-
-.dark{
-    background-color: black;
-    color: white;
-    transition: all 1.5s;
+.show input{
+    height: 20px;
 }
