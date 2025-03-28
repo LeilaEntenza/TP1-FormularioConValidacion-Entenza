@@ -22,7 +22,7 @@
             <p>Contraseña </p>
             <input id="Clave" type="password" oninput="verificarClave(this)" onchange="verificarClave(this)">
             <div class="show">
-            <input type="checkbox" class="check" id="show" onclick="mostrarContra('#Clave')"> <p>Mostrar contraseña</p>
+            <input type="checkbox" class="check" id="show" onclick="('#Clave')"> <p>Mostrar contraseña</p>
         </div>
             <div id="devolucionContra" class="devol"></div>
             <p>Confirmar contraseña </p>
@@ -33,7 +33,7 @@
             <div id="devolucionIguales" class="devol"></div>
             <input class="Registrar" id="send" type="button" value="Registrar" onclick="verificar()">
             <div id="intentoRegistrar" class="devol"></div>
-            <input class="ListaUsuarios" type="button" value="Mostrar usuarios" onclick="mostrarUsuarios()">
+            <input class="ListaUsuarios" id="usuarios" type="button" value="Mostrar usuarios" onclick="mostrarUsuarios()">
         </form>
     </div>
     <div id="mostrar" class="mostrar">

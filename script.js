@@ -79,12 +79,16 @@ function verificar(){
 
 function mostrarUsuarios(){
     let mostrar = document.getElementById("mostrar");
+    let mostrarInput = document.getElementById("usuarios");
+    mostrarInput.value = "Ocultar usuarios";
+    mostrarInput.setAttribute("onclick", "ocultarUsuarios()");    
     if(usuarios != null){
         
         for (let i = 0; i < usuarios.length; i++){
             nombres+=`<li>${usuarios[i].Nombre}</li>`;
         }
         mostrar.innerHTML = `<h1>Usuarios registrados:</h1><ul>${nombres}</ul>`;
+        
     }
 }
 
@@ -94,4 +98,13 @@ const mostrarContra = (campo) => {
         clave.type = "text";
     }
     else clave.type = "password";
+}
+
+const ocultarUsuarios = () => {
+    let mostrar = document.getElementById("mostrar");
+    mostrar.innerHTML = "";
+
+    let mostrarInput = document.getElementById("usuarios");
+    mostrarInput.value = "Mostrar usuarios";
+    mostrarInput.setAttribute("onclick", "mostrarUsuarios()");
 }
