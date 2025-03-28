@@ -1,6 +1,6 @@
 var nombreVer=0, mailVer=0, claveVer=0, comprobarVer=0;
 
-function verificarNombre(element){
+const verificarNombre = (element) => {
     let nombre = document.getElementById('NombreCompleto').value;
     let devolucion = document.getElementById("devolucionNombre");
     if(nombre.length > 3){
@@ -13,7 +13,7 @@ function verificarNombre(element){
     }
 }
 
-function verificarMail(element){
+const verificarMail = (element) =>{
     let email = document.getElementById("Email").value;
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     let devolucion = document.getElementById("devolucionMail");
@@ -27,7 +27,7 @@ function verificarMail(element){
     }
 }
 
-function verificarClave(element){
+const verificarClave = (element) =>{
     let clave = document.getElementById("Clave").value;
     let devolucion = document.getElementById("devolucionContra");
     const contieneNum = /\d/;
@@ -42,7 +42,7 @@ function verificarClave(element){
 }
 }
 
-function sonIguales(element){
+const sonIguales = (element) => {
     let devolucion = document.getElementById("devolucionIguales");
     let clave = document.getElementById("Clave").value;
     let claveVerificar = document.getElementById("Confirmar").value;
@@ -57,9 +57,7 @@ function sonIguales(element){
 }
 
 var usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
-var nombres = [];
-
-function verificar(){
+const verificar = () => {
         let nombre = document.getElementById('NombreCompleto').value;
         let email = document.getElementById("Email").value;
         let clave = document.getElementById("Clave").value;
@@ -77,7 +75,8 @@ function verificar(){
         else devolucion.innerHTML = "por favor, complete los datos correctamente antes de enviar";
 }
 
-function mostrarUsuarios(){
+const mostrarUsuarios = () => {
+    var nombres = [];
     let mostrar = document.getElementById("mostrar");
     let mostrarInput = document.getElementById("usuarios");
     mostrarInput.value = "Ocultar usuarios";
